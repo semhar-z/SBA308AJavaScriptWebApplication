@@ -8,23 +8,33 @@
 </head>
 <body>
     <header>
-        <h1>Welcome to My Random Dog Web Application</h1>
+        <h1>Welcome to My Random Dog Image Selector!</h1>
+        <h1>From two different APIs!</h1>
     </header>
 
-    <!-- Dog Image Fetch Button -->
-    <h2 class="w-100 text-center mt-5">Get a Random Dog</h2>
-    <button id="randomDogButton" style="width: 200px;" class="btn btn-primary my-1 mx-auto">Get Random Dog</button>
 
-    <!-- Dog Image Section and I set it with a default random dog image--> 
-    <div id="dogContainer" class="text-center mt-5">
-        <img id="dogImage" src= "https://random.dog/2bc7df24-892a-43aa-a3de-eab849336cf4.jpg" alt="Dog" style="display: block; width: 300px;" />
+     <div class="dog-section">
+        <!-- Dog Image Fetch Button -->
+        <div class="dog-container">
+            <h2 class="w-100 text-center mt-5">Dogs from Woof.json</h2>
+            <button id="randomDogButton" style="width: 200px;" class="btn btn-primary my-1 mx-auto">Get Random Dog</button>
+            <img id="dogImage" src="https://random.dog/2bc7df24-892a-43aa-a3de-eab849336cf4.jpg" alt="Dog" style="display: block; width: 300px;" />
+        </div>
+
+        <div class="dog-container">
+            <h2 class="w-100 text-center mt-5">Dogs based on the Stanford Dogs Dataset!</h2>
+            <button id="randomDogButton1" style="width: 200px;" class="btn btn-primary my-1 mx-auto">Get Random Dog</button>
+            <img id="dogImage1" src="https://random.dog/2bc7df24-892a-43aa-a3de-eab849336cf4.jpg" alt="Dog" style="display: block; width: 300px;" />
+        </div>
     </div>
 
+
     <footer>
-        <p>© 2024 My Random Dog Web Application</p>
+        <p>© 2024 My Random Dog Image Selector!</p>
     </footer>
 
 
-    <script src="index.js"></script>
+    <!-- <script src="index.js"></script> -->
+    <script type="module" src="index.js"></script>
 </body>
 </html>

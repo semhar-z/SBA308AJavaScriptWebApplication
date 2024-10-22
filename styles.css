@@ -13,18 +13,22 @@ header {
     text-align: center;
 }
 
-main {
-    padding: 20px;
-}
+
 
 h2 {
     color: #4CAF50;
 }
 
-/* ul {
-    list-style-type: square;
-} */
+.dog-section {
+    display: flex; /* Use flexbox to align items */
+    justify-content: space-around; /* Space the items evenly */
+    margin: 20px; /* Add some margin for spacing */
+}
 
+.dog-container {
+    flex: 1; /* Each container will take equal width */
+    padding: 10px; /* Add some padding */
+}
 footer {
     background-color: #333;
     color: white;
