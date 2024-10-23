@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> JavaScript Web Application</title>
+    <title>JavaScript Web Application</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,29 +12,61 @@
         <h1>From two different APIs!</h1>
     </header>
 
+   
+        <div class="dog-section">
+            <!-- Random Dog API -->
+            <div class="dog-container">
+                <h2>Random Dog API</h2>
+                <button id="randomDogButton" style="width: 200px;">Get Random Dog</button>
+                <div class="img-container"> 
+                  <img id="dogImage" src="https://random.dog/2bc7df24-892a-43aa-a3de-eab849336cf4.jpg" alt="Dog" />
+                </div>
+            </div>
 
-     <div class="dog-section">
-        <!-- Dog Image Fetch Button -->
-        <div class="dog-container">
-            <h2 class="w-100 text-center mt-5">Dogs from Woof.json</h2>
-            <button id="randomDogButton" style="width: 200px;" class="btn btn-primary my-1 mx-auto">Get Random Dog</button>
-            <img id="dogImage" src="https://random.dog/2bc7df24-892a-43aa-a3de-eab849336cf4.jpg" alt="Dog" style="display: block; width: 300px;" />
+            <!-- Dog CEO API -->
+            <div class="dog-container">
+                <h2>Dog CEO API</h2>
+                <button id="randomDogButton1" style="width: 200px;">Get Random Dog</button>
+              <div class="img-container"> 
+                 <img id="dogImage1" src="https://images.dog.ceo/breeds/corgi-cardigan/n02113186_7215.jpg" alt="Dog" />
+              </div>
+            </div>
+        </div>
+    
+
+        <!-- Search Feature for Dog Breeds -->
+        <div class="search-section">
+            <h2>Search for Dog Breeds</h2>
+            <input type="text" id="breedInput" placeholder="Enter breed name" />
+            <button id="searchButton">Search</button>
+         <div class="searchedDogImageContainer">
+            <img id="searchedDogImage" style="display: none; width: 300px; margin-top: 10px;" alt="Searched Dog" />
+            <!-- <img id="searchedDogImage" style="visibility: hidden; width: 300px; margin-top: 10px;" alt="Searched Dog" /> -->
+         </div>
+
         </div>
 
-        <div class="dog-container">
-            <h2 class="w-100 text-center mt-5">Dogs based on the Stanford Dogs Dataset!</h2>
-            <button id="randomDogButton1" style="width: 200px;" class="btn btn-primary my-1 mx-auto">Get Random Dog</button>
-            <img id="dogImage1" src="https://random.dog/2bc7df24-892a-43aa-a3de-eab849336cf4.jpg" alt="Dog" style="display: block; width: 300px;" />
+        <!-- Breeds List and Favorite Management -->
+    <div class="favoriteBreeds">
+        <div class="breeds-section">
+            <h2>Dog Breeds and Favorite Management</h2>
+            <button id="getBreedsButton">Get Breeds List</button>
+            <div id="breedsList"></div>
+        </div>
+        <div class="favorite-section">
+            <h2>Favorite Breed</h2>
+            <input type="text" id="favoriteBreed" placeholder="Add/Update favorite breed" />
+            <button id="addFavoriteBreed">Add Favorite</button>
+            <button id="updateFavoriteBreed">Update Favorite</button>
+            <div id="favoriteBreedDisplay"></div>
         </div>
     </div>
-
+  
 
     <footer>
         <p>© 2024 My Random Dog Image Selector!</p>
     </footer>
 
-
-    <!-- <script src="index.js"></script> -->
     <script type="module" src="index.js"></script>
 </body>
 </html>

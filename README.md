@@ -9,7 +9,7 @@
 
 // I have created a simple web page that uses fetch to get random pictures of dogs
 
-   from one external API.
+   from two different external API.
 
 // I used async/await, modules and imports and exports using another exteranl API 
 
