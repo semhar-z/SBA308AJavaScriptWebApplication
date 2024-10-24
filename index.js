@@ -31,11 +31,12 @@ document.getElementById('randomDogButton1').addEventListener('click', async () =
     const imageUrl = await fetchRandomDogImage(); // Fetch new dog image
 
     if (imageUrl) {
-        dogImage1.src = imageUrl; // Update image src if fetched successfully
+        dogImage1.src = imageUrl; 
     } else {
-        dogImage1.alt = 'Error fetching image'; // Update alt text on error
+        dogImage1.alt = 'Error fetching image'; 
     }
 });
+
 
 // Search for dog breeds
 document.getElementById('searchButton').addEventListener('click', async () => {
@@ -77,13 +78,34 @@ document.getElementById('getBreedsButton').addEventListener('click', async () =>
 });
 
 
-let favoriteBreed = '';
-
-document.getElementById('addFavoriteBreed').addEventListener('click', () => {
+  // jsonplaceholder API I used this for simulation // I could not find any other API
+  // that I can post 
+document.getElementById('addFavoriteBreed').addEventListener('click', async () => {
     const breedInput = document.getElementById('favoriteBreed').value.trim().toLowerCase();
+    
     if (breedInput) {
-        // Simulating POST request (add favorite)
-        favoriteBreed = breedInput;
-        document.getElementById('favoriteBreedDisplay').innerHTML = `Favorite Breed: ${favoriteBreed}`;
+        try {
+            //  POST request
+            const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    title: 'Favorite Breed',
+                    body: breedInput,
+                }),
+            });
+
+            const data = await response.json();
+
+            // Log the response data to the console
+            console.log('POST Response:', data);
+
+            // Update favorite breed display with the response
+            document.getElementById('favoriteBreedDisplay').innerHTML = `Favorite Breed: ${data.body}`;
+        } catch (error) {
+            console.error('Error adding favorite breed:', error);
+        }
     }
 });

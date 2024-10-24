@@ -6,6 +6,8 @@ export const fetchRandomDogImage = async () => {
         }
         const data = await response.json();
         return data.message; // Return the URL of the dog image
+ 
+    
     } catch (error) {
         console.error('Error fetching dog image:', error);
         return null; // Return null if there's an error

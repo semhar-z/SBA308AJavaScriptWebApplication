@@ -14,3 +14,8 @@
 // I used async/await, modules and imports and exports using another exteranl API 
 
    to get other random dog pictures.
+
+// I created user interaction with the API through a search feature
+
+// Enable user manipulation of data within the API (I used MOCK API jsonplaceholder.typicode.com) through the use of POST 
+
